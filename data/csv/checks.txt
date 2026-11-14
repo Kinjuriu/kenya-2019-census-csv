@@ -1,4 +1,4 @@
-Checks run 2026-11-14 09:56 UTC
+Checks run 2026-11-14 12:02 UTC
 
 PASS  Volume II national total is 47,564,296
 2 issue(s)  Volume II 2.4: every unit equals the sum of the units below it (as printed)
@@ -28,11 +28,54 @@ PASS  Volume II 2.4 after errata
       page 187 MT. KENYA FOREST: age 10 male + female 1 but total 2
       page 337 KAKAMEGA FOREST: female age 20-24 0 but single years sum to 1
       page 337 KAKAMEGA FOREST: total age 20-24 0 but single years sum to 1
+PASS  Volume IV 2.2: attendance statuses add up to the total
+PASS  Volume IV 2.2: printed per cent = count / total (0.05 tolerance)
+PASS  Volume IV 2.2: Kenya male + female + intersex and rural + urban = all; below Kenya the gap is intersex
+PASS  Volume IV 2.2: every county equals the sum of its sub-counties
+PASS  Volume IV 2.3: levels add up to the total attending
+PASS  Volume IV 2.3: Kenya male + female + intersex and rural + urban = all; below Kenya the gap is intersex
+PASS  Volume IV 2.3: every county equals the sum of its sub-counties
+16 issue(s)  Volume IV 2.3 total attending = 2.2 at school
+      2.2 vs 2.3: {'level': 'county', 'county': 'KAKAMEGA', 'name': 'KAKAMEGA', 'breakdown': 'all'}: at_school 853,031 against total_attending 853,032
+      2.2 vs 2.3: {'level': 'county', 'county': 'KAKAMEGA', 'name': 'KAKAMEGA', 'breakdown': 'male'}: at_school 428,344 against total_attending 428,345
+      2.2 vs 2.3: {'level': 'county', 'county': 'KIAMBU', 'name': 'KIAMBU', 'breakdown': 'female'}: at_school 389,788 against total_attending 389,789
+      2.2 vs 2.3: {'level': 'county', 'county': 'KIAMBU', 'name': 'KIAMBU', 'breakdown': 'male'}: at_school 388,770 against total_attending 388,769
+      2.2 vs 2.3: {'level': 'county', 'county': 'WAJIR', 'name': 'WAJIR', 'breakdown': 'all'}: at_school 132,611 against total_attending 132,610
+      2.2 vs 2.3: {'level': 'county', 'county': 'WAJIR', 'name': 'WAJIR', 'breakdown': 'female'}: at_school 56,970 against total_attending 56,969
+      2.2 vs 2.3: {'level': 'national', 'county': nan, 'name': 'KENYA', 'breakdown': 'rural'}: at_school 12,922,660 against total_attending 12,922,659
+      2.2 vs 2.3: {'level': 'national', 'county': nan, 'name': 'KENYA', 'breakdown': 'urban'}: at_school 4,857,617 against total_attending 4,857,618
+      2.2 vs 2.3: {'level': 'subcounty', 'county': 'KAKAMEGA', 'name': 'BUTERE', 'breakdown': 'all'}: at_school 70,109 against total_attending 70,110
+      2.2 vs 2.3: {'level': 'subcounty', 'county': 'KAKAMEGA', 'name': 'BUTERE', 'breakdown': 'male'}: at_school 35,289 against total_attending 35,290
+      2.2 vs 2.3: {'level': 'subcounty', 'county': 'KIAMBU', 'name': 'LIMURU', 'breakdown': 'all'}: at_school 53,174 against total_attending 53,173
+      2.2 vs 2.3: {'level': 'subcounty', 'county': 'KIAMBU', 'name': 'LIMURU', 'breakdown': 'male'}: at_school 26,851 against total_attending 26,850
+      2.2 vs 2.3: {'level': 'subcounty', 'county': 'KIAMBU', 'name': 'THIKA WEST', 'breakdown': 'all'}: at_school 79,125 against total_attending 79,126
+      2.2 vs 2.3: {'level': 'subcounty', 'county': 'KIAMBU', 'name': 'THIKA WEST', 'breakdown': 'female'}: at_school 39,597 against total_attending 39,598
+      2.2 vs 2.3: {'level': 'subcounty', 'county': 'WAJIR', 'name': 'BUNA', 'breakdown': 'all'}: at_school 6,081 against total_attending 6,080
+      2.2 vs 2.3: {'level': 'subcounty', 'county': 'WAJIR', 'name': 'BUNA', 'breakdown': 'female'}: at_school 2,671 against total_attending 2,670
+PASS  Volume IV 2.12: households equal Volume II conventional households (counties)
+PASS  Volume IV 2.12: roofing percentages sum to 100 (0.5 tolerance; rows with households)
+4 issue(s)  Volume IV aged 3+ never exceeds Volume III aged 3+
+      county ISIOLO: male aged 3+ 128,141 in Volume IV, more than 128,140 in Volume III
+      subcounty ISIOLO: male aged 3+ 55,148 in Volume IV, more than 55,147 in Volume III
+      subcounty MT. KENYA FOREST: male aged 3+ 118 in Volume IV, more than 117 in Volume III
+      subcounty NYAKACH: female aged 3+ 73,880 in Volume IV, more than 73,879 in Volume III
+PASS  Volume IV 2.12: households equal Volume II conventional households (sub-counties with households)
+PASS  Volume IV 2.6b: statuses add up to the total (total)
+PASS  Volume IV 2.6b county rows = 2.2 county rows (total)
+PASS  Volume IV 2.6b: statuses add up to the total (male)
+PASS  Volume IV 2.6b county rows = 2.2 county rows (male)
+PASS  Volume IV 2.6b: statuses add up to the total (female)
+PASS  Volume IV 2.6b county rows = 2.2 county rows (female)
+PASS  Volume IV 2.6b: age groups 3-5, 6-13, 14-17, 18-22, 23+ and not stated add up to the county row
 
 Volume II sub-counties with no page in Volume III:
       subcounty LAKE BARINGO (BARINGO), 0 people
       subcounty MAU FOREST (KERICHO), 0 people
       subcounty TINDERET FOREST (KERICHO), 0 people
       subcounty MAU FOREST (BOMET), 0 people
+
+Volume IV rows with numbers but no label (printing artefacts, left out):
+      table 2.3 page 61: - 0 -
+      table 2.3 page 62: - 0 -
 
 Issues in the printed tables that remain after errata are listed in known_issues.csv.
