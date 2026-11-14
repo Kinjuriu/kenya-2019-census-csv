@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "Cite KNBS as the source of the data. To cite this extraction, use the details below."
+title: "Kenya 2019 census data in CSV: population by county, sub-county, location, sub-location, age and sex"
+authors:
+  - family-names: Ngugi
+    given-names: Stephane Njoki
+date-released: 2026-11-14
+repository-code: "https://github.com/Kinjuriu/kenya-2019-census-csv"
+license: MIT
+keywords: [Kenya, census, 2019, KNBS, population, county, sub-county, sub-location, age, school-age, CSV]
+references:
+  - type: report
+    title: "2019 Kenya Population and Housing Census, Volumes II and III"
+    authors:
+      - name: "Kenya National Bureau of Statistics"
+    year: 2019
+    url: "https://www.knbs.or.ke/reports/kenya-census-2019/"

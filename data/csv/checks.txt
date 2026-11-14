@@ -1,0 +1,38 @@
+Checks run 2026-11-14 09:56 UTC
+
+PASS  Volume II national total is 47,564,296
+2 issue(s)  Volume II 2.4: every unit equals the sum of the units below it (as printed)
+      division JOMVU (page 32): male 83,002 but its 2 location rows sum to 52,148
+      location MIKINDANI (page 32): male 333 but its 2 sublocation rows sum to 31,187
+PASS  Volume II 2.3: every county equals the sum of its sub-counties
+PASS  Volume II 2.2 and 2.3 counties agree
+PASS  Volume II 2.3 and 2.4 counties agree
+6 issue(s)  Volume II 2.3 and 2.4 sub-counties agree
+      2.3 vs 2.4: subcounty MARIGAT / MARIGAT: total 90,955 against 90,958
+      2.3 vs 2.4: subcounty MARIGAT / MARIGAT: male 45,706 against 45,707
+      2.3 vs 2.4: subcounty MARIGAT / MARIGAT: female 45,246 against 45,248
+      2.3 vs 2.4: subcounty TIATY EAST / TIATY EAST: total 73,424 against 73,421
+      2.3 vs 2.4: subcounty TIATY EAST / TIATY EAST: male 38,356 against 38,355
+      2.3 vs 2.4: subcounty TIATY EAST / TIATY EAST: female 35,068 against 35,066
+PASS  Volume II 2.2a rural + 2.2b urban = 2.2 total
+5 issue(s)  Volume III ages add up (as printed)
+      page 187 MT. KENYA FOREST: male Total 123 but ages sum to 122
+      page 187 MT. KENYA FOREST: male age 10-14 5 but single years sum to 4
+      page 187 MT. KENYA FOREST: age 10 male + female 1 but total 2
+      page 337 KAKAMEGA FOREST: female age 20-24 0 but single years sum to 1
+      page 337 KAKAMEGA FOREST: total age 20-24 0 but single years sum to 1
+PASS  Volume II 2.4 after errata
+5 issue(s)  Volume III after errata
+      page 187 MT. KENYA FOREST: male Total 123 but ages sum to 122
+      page 187 MT. KENYA FOREST: male age 10-14 5 but single years sum to 4
+      page 187 MT. KENYA FOREST: age 10 male + female 1 but total 2
+      page 337 KAKAMEGA FOREST: female age 20-24 0 but single years sum to 1
+      page 337 KAKAMEGA FOREST: total age 20-24 0 but single years sum to 1
+
+Volume II sub-counties with no page in Volume III:
+      subcounty LAKE BARINGO (BARINGO), 0 people
+      subcounty MAU FOREST (KERICHO), 0 people
+      subcounty TINDERET FOREST (KERICHO), 0 people
+      subcounty MAU FOREST (BOMET), 0 people
+
+Issues in the printed tables that remain after errata are listed in known_issues.csv.
