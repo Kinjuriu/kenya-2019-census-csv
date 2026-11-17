@@ -54,3 +54,39 @@ def test_volume3_rows_in_plain_text():
         if not re.search(pattern, text):
             missing.append(f'page {r.page} {r.area} age {r.age}')
     assert not missing, f'{len(missing)} of {len(df)} rows not found, first: {missing[:5]}'
+
+
+V4_FILES = {
+    'kenya_2019_census_school_attendance_by_county_subcounty.csv': 'total',
+    'kenya_2019_census_school_attendance_by_education_level_county_subcounty.csv': 'total_attending',
+    'kenya_2019_census_school_attendance_by_age_group_county.csv': 'total_total',
+    'kenya_2019_census_roofing_material_by_county_subcounty.csv': 'conventional_households',
+}
+LABELS = {'male': 'Male', 'female': 'Female', 'intersex': 'Intersex', 'rural': 'Rural', 'urban': 'Urban'}
+
+
+def v4_cell(v, is_pct):
+    """Zero prints as '-' (or '0', '0.0'); per cents with one decimal; counts with thousands separators."""
+    if v == 0:
+        return r'(?:-|0|0\.0)'
+    return re.escape(f'{v:.1f}' if is_pct else f'{int(v):,}')
+
+
+def test_volume4_rows_in_plain_text():
+    from kenya_census import volume4
+    missing, n = [], 0
+    for name, first in V4_FILES.items():
+        df = pd.read_csv(f'{CSV}/{name}')
+        cols = list(df.columns[df.columns.get_loc(first):df.columns.get_loc('page')])
+        label_col = 'county' if 'age_group' in name else 'name'
+        for r in df.itertuples(index=False):
+            r = r._asdict()
+            b = r['breakdown']
+            label = r[label_col] if b == 'all' else LABELS.get(b, b.replace('age_', '').replace('_', ' ').title()
+                                                               if b == 'age_not_stated' else b.replace('age_', ''))
+            pattern = re.escape(''.join(str(label).split())) + ''.join(
+                v4_cell(r[c], c.endswith('_pct')) for c in cols)
+            n += 1
+            if not re.search(pattern, page_text(volume4.VOLUME4, r['page'])):
+                missing.append(f"{name} page {r['page']} {label} {b}")
+    assert not missing, f'{len(missing)} of {n} rows not found, first: {missing[:5]}'

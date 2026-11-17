@@ -8,6 +8,7 @@ https://www.knbs.or.ke/reports/kenya-census-2019/
 |---|---|---|
 | `2019-Kenya-population-and-Housing-Census-Volume-2-Distribution-of-Population-by-Administrative-Units.pdf` | Volume II: Distribution of Population by Administrative Units (270 pages) | `4e4e091a67eddebc7c1158d09c02f4470e10786a269443dde97a4fcc17a4872d` |
 | `2019-Kenya-population-and-Housing-Census-Volume-3-Distribution-of-Population-by-Age-and-Sex.pdf` | Volume III: Distribution of Population by Age and Sex (526 pages) | `dc1253195cd766e42e0af6461fc20e2797ef9831301369bfc8942aee891cbb49` |
+| `2019-Kenya-population-and-Housing-Census-Volume-4-Distribution-of-Population-by-Socio-Economic-Characteristics.pdf` | Volume IV: Distribution of Population by Socio-Economic Characteristics (498 pages) | `56d36d0929299d422249bc843156bb9990a5d29b87dd50e017322a627d492ab2` |
 
 Downloaded on 14 November 2026. The build warns if your copy differs from these.
 

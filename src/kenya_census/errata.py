@@ -29,6 +29,25 @@ KNOWN_ISSUES = [
      'slightly below Volume II.'),
     ('Volume III', '2.3', 'LAKE BARINGO, MAU FOREST (Kericho), TINDERET FOREST, MAU FOREST (Bomet)',
      'Sub-counties with 0 people have no page in Volume III.'),
+    ('Volume IV', '2.2 and 2.3', 'KAKAMEGA (Butere), KIAMBU (Limuru, Thika West), WAJIR (Buna); Kenya rural and urban',
+     '"At school" in table 2.2 and "total attending" in table 2.3 differ by 1 person in these units and their '
+     'counties. Both are published as printed in their own tables.'),
+    ('Volume IV', '2.3', 'pages 61 and 62 (Mandera)',
+     'Two rows print "- 0 -" with no label. They are printing artefacts and are left out; the Mandera rows around '
+     'them add up without them.'),
+    ('Volume IV', '2.2, 2.3, 2.6b', 'all counties and sub-counties',
+     'Below national level, intersex people are counted in the "all" rows but have no row of their own (KNBS '
+     'footnote), so all can exceed male + female by a few people.'),
+    ('Volume IV', 'all tables', 'all areas',
+     'People aged 3 and over in Volume IV are 338,960 fewer (0.77 per cent) than in Volume III. The special '
+     'population (travellers, outdoor sleepers, people in hotels, lodges, schools and hospitals) was counted on short '
+     'questionnaires (Volume IV page 16), so Volume IV most likely covers people counted on the main questionnaire '
+     'only. KNBS does not state this in one sentence; this is our reading. The gap by area is in '
+     'volume4_vs_volume3_aged_3_plus.csv.'),
+    ('Volume IV', '2.2 against Volume III', 'ISIOLO county and sub-county (male), MT. KENYA FOREST in Nyeri (male), '
+     'NYAKACH (female)', 'Volume IV is 1 person higher than Volume III aged 3 and over. Left as printed.'),
+    ('Volume IV', '2.12', 'all rows', 'Roofing percentages are rounded to one decimal place and can sum to 99.8 to '
+     '100.2. Sub-counties with no households (forests) print "-" in every column.'),
 ]
 
 
